@@ -12,7 +12,15 @@ var Calculadora ={
     {    console.log("es: " + numero);
         if (display.innerHTML=="0" || display.innerHTML== "")
         {
+            if (numero == ".")
+            {   console.log("es punto");
+                if (display.innerHTML.length < 8)
+                {
+                    display.innerHTML = display.innerHTML + numero;
+                }
+            }else{
                display.innerHTML = numero; 
+            }
             
         }else{
             if (display.innerHTML.length < 8)
